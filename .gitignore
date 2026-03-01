@@ -1,0 +1,3 @@
+libs/*.jar
+.gradle/
+build/
