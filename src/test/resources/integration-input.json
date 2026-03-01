@@ -1,0 +1,47 @@
+[
+  {
+    "namespace": "com.example.mapper.UserMapper",
+    "id": "selectByCondition",
+    "type": "SELECT",
+    "branchPattern": "ALL_SET",
+    "sql": "SELECT id, name, email FROM users WHERE 1=1 AND name = ? AND email = ?",
+    "parameters": []
+  },
+  {
+    "namespace": "com.example.mapper.UserMapper",
+    "id": "selectByCondition",
+    "type": "SELECT",
+    "branchPattern": "ALL_NULL",
+    "sql": "SELECT id, name, email FROM users WHERE 1=1",
+    "parameters": []
+  },
+  {
+    "namespace": "com.example.mapper.UserMapper",
+    "id": "selectWithJoin",
+    "type": "SELECT",
+    "sql": "SELECT u.name, o.product_name FROM users u JOIN orders o ON u.id = o.user_id WHERE o.amount > ?",
+    "parameters": []
+  },
+  {
+    "namespace": "com.example.mapper.UserMapper",
+    "id": "updateSelective",
+    "type": "UPDATE",
+    "branchPattern": "ALL_SET",
+    "sql": "UPDATE users SET name = ?, email = ? WHERE id = ?",
+    "parameters": []
+  },
+  {
+    "namespace": "com.example.mapper.UserMapper",
+    "id": "insertUser",
+    "type": "INSERT",
+    "sql": "INSERT INTO users (id, name, email) VALUES (?, ?, ?)",
+    "parameters": []
+  },
+  {
+    "namespace": "com.example.mapper.UserMapper",
+    "id": "selectAllColumns",
+    "type": "SELECT",
+    "sql": "SELECT * FROM users WHERE id = ?",
+    "parameters": []
+  }
+]
